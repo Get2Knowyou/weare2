@@ -29,11 +29,35 @@ button:hover { cursor: pointer;}
     border-color: transparent transparent #ccc transparent; 
 
 }
+/**공통**/
 body{
     background-image: url('./image/bg.png');
     height: 100vh;
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat; 
+
+}
+
+.header{
+    background: transparent;
+    height:10%; 
+    border-top: 3px solid #19283d;
+    border-bottom: 3px solid #19283d;
+    color: #19283d;
+    margin-bottom: 30px; 
+    transform :translateX(-10px)
+}
+.header ul { display: flex; align-items: center; justify-content: space-between; width:90%;}
+.header ul li { list-style: none;display: flex; align-items: center; justify-content: center;  }
+.header ul li a { text-decoration: none; color: #19283d; font-size: 20px;}
+.header ul li.on{ gap: 10px; font-weight: 600;}
+.header ul li.on::before{content: "";width: 10px; height: 10px; border-radius: 100%; display: inline-block; background-color: #19283d;}
+.header ul li.on::after{content: "";width: 10px; height: 10px; border-radius: 100%; display: inline-block; background-color: #19283d;}
+
+
+.visitors{ margin:0 auto; width: 90%; height: 85%;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
