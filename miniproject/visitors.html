@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./visitors.css" />
+   
+  </head>
+  <body>
+    <!--공통부분 start-->
+    <!--
+    <div class="header">
+      <h1>Nice 2 Meet U</h1>
+      <div class="icons">
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
+      </div>
+    </div>
+    -->
+    <!--
+    <div class="nav">
+      <a href="#">Team</a>
+      <a href="#">Members</a>
+      <a href="#">Join</a>
+      <a href="./visitors.html" class="on">Visitors</a>
+    </div>
+    -->
+    <!--공통부분 end-->
+   
+    <div class="content" style="height: 100vh; margin: 0; padding: 40px;">
+      <header style="height: 10%;  ">
+        HEADER
+      </header>
+      <div class="content-box" style="height: 90%; overflow: hidden; overflow-y: scroll; ">
+        <h2>2조에게 응원의 메세지를 남겨주세요!</h2>
+
+        <button id="openWrite">작성하기</button>
+
+        <form name="send-msg" id="sendMsg">
+            <div class="inputForm">
+                <label for="userId">작성자</label>
+                <input type="text" name="" id="userId" placeholder="이름">
+            </div>
+
+            <div class="inputForm">
+                <label for="msg">내용</label>
+                <input type="textarea" id="msg" placeholder="내용을 입력하세요">
+            </div>
+
+            <div class="inputForm">
+                <label for="userPw">비밀번호</label>
+                <input type="password" name="" id="userPw" placeholder="비밀번호 입력">
+            </div>
+
+            <button type="submit">방명록 남기기</button>
+
+        </form>
+        
+        <div class="comment-area">
+            <ul id="commentList">
+                <li>
+                    <p class="name">강혜린</p>
+                    <p class="memo">2조 화이팅</p>
+                    <button>삭제</button>
+                </li>
+                <li>
+                  <p class="name">강혜린</p>
+                  <p class="memo">2조 화이팅</p>
+                  <button>삭제</button>
+              </li>
+              <li>
+                <p class="name">강혜린</p>
+                <p class="memo">2조 화이팅</p>
+                <button>삭제</button>
+            </li>
+            <li>
+              <p class="name">강혜린</p>
+              <p class="memo">2조 화이팅</p>
+              <button>삭제</button>
+          </li>
+          <li>
+            <p class="name">강혜린</p>
+            <p class="memo">2조 화이팅</p>
+            <button>삭제</button>
+        </li>
+        <li>
+          <p class="name">강혜린</p>
+          <p class="memo">2조 화이팅</p>
+          <button>삭제</button>
+      </li>
+      <li>
+        <p class="name">강혜린</p>
+        <p class="memo">2조 화이팅</p>
+        <button>삭제</button>
+    </li>
+    <li>
+      <p class="name">강혜린</p>
+      <p class="memo">2조 화이팅</p>
+      <button>삭제</button>
+  </li>
+  <li>
+    <p class="name">강혜린</p>
+    <p class="memo">2조 화이팅</p>
+    <button>삭제</button>
+</li>
+<li>
+  <p class="name">강혜린</p>
+  <p class="memo">2조 화이팅</p>
+  <button>삭제</button>
+</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    //방명록 작성 폼 보이게 하기기
+    document.getElementById("openWrite").addEventListener("click", function(){
+        document.getElementById("sendMsg").classList.toggle('disBlock');
+    })
+
+    //방명록 작성
+    const gestForm = document.getElementById("sendMsg").addEventListener("submit", function(e){
+        //alert('확인')
+        //폼 제출 막기
+        e.preventDefault();
+        
+
+        const userId = document.getElementById("userId").value;
+        const msg = document.getElementById("msg").value;
+        const userPw = document.getElementById("userPw").value;
+
+
+        //유효성 검사
+        if(userId && msg && userPw){
+            //컴포넌트 생성
+            const msgHtml = document.createElement("li");
+            msgHtml.innerHTML = `
+                <p class="name">${userId}</p>
+                <p class="memo">${msg}</p>
+                <button>삭제</button>
+            `;
+            document.getElementById("commentList").prepend(msgHtml);
+        }else{
+            if(!userId){
+                alert("작성자를 입력하세요.");
+                return;
+            }
+            if(!msg){
+                alert("내용을 입력하세요.");
+                return;
+            }
+            if(!userPw){
+                alert("비밀번호를 입력하세요.");
+                return;
+            }
+        }
+
+        
+
+       
+
+        //값 비워주기
+        document.getElementById("userId").value = '';
+        document.getElementById("msg").value = '';
+        document.getElementById("userPw").value = '';
+
+    })
+
+
+  </script>
+</html>

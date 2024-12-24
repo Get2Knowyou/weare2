@@ -1,0 +1,39 @@
+button:hover { cursor: pointer;}
+
+#sendMsg { background: yellow; padding: 20px;}
+#sendMsg > * { width: 100%; }
+#sendMsg div + div { margin-top: 10px; } 
+#sendMsg .inputForm > * { width: 100%; }
+#sendMsg .inputForm label { display: block; text-align: left; margin-bottom:5px}
+#sendMsg .inputForm input { padding: 10px; border-radius: 5px;}
+#sendMsg button { margin: 20px 0; height: 50px;}
+#sendMsg {  height: 0; opacity: 0; transition: height 1s ease-out, transform 1s ease-out; }
+#sendMsg.disBlock { height: fit-content; opacity: 1;}
+
+#commentList li { list-style: none; padding: 20px 10px; position: relative; }
+#commentList li button { position: absolute; top: 20px; right: 10px;} 
+#commentList li + li {border-top: 1px solid #ccc; }
+#commentList li p { text-align: left; }
+#commentList li p.name { font-weight: 600; }
+#commentList li p.memo { 
+    width: 100%; background:#ccc; padding: 10px; border-radius: 10px; margin-top: 14px;
+    position: relative;
+}
+#commentList li p.memo:after{
+    content: "";
+    position: absolute;
+    top: -18px; 
+    left: 15px; 
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ccc transparent; 
+
+}
+body{
+    background-image: url('./image/bg.png');
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
+
