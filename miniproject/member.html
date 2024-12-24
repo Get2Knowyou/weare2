@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>팀 소개</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Team "Nice 2 Meet U"</h1>
+      <div class="icons">
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
+      </div>
+    </div>
+    <div class="nav">
+      <a href="main.html">Team</a>
+      <a href="member.html">Members</a>√
+      <a href="#">Join</a>
+      <a href="#">News</a>
+    </div>
+    <div class="content">
+      <div class="content-box">
+        <h2>팀 소개</h2>
+        <p>팀에 대한 소개를 여기에 작성하세요.</p>
+        <section class="member_wrapper">
+          <div class="wrap" id="team-member">
+            <div class="team-container"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="modal_container">
+      <div id="team_modal" class="team_modal">
+        <span class="closeBtn" id="close-modal">
+          <img src="image/close.png" alt="닫기버튼" />
+        </span>
+        <div id="member_image"></div>
+        <h3 id="member_name"></h3>
+        <p id="member_age"></p>
+        <div id="member_content"></div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="modal.js"></script>
+  </body>
+</html>
