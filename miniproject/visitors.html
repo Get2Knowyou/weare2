@@ -38,7 +38,7 @@
             <a href="./home.html">HOME</a>
           </li>
           <li>
-            <a href="#">TEAM</a>
+            <a href="main.html">TEAM</a>
           </li>
           <li>
             <a href="member.html">MEMBERS</a>
@@ -65,7 +65,12 @@
 
             <div class="inputForm">
               <label for="userPw">비밀번호</label>
-              <input type="password" name="" id="userPw" placeholder="비밀번호 입력" />
+              <input
+                type="password"
+                name=""
+                id="userPw"
+                placeholder="비밀번호 입력"
+              />
             </div>
           </div>
 
@@ -142,44 +147,46 @@
     });
 
     //방명록 작성
-    const gestForm = document.getElementById("sendMsg").addEventListener("submit", function (e) {
-      //alert('확인')
-      //폼 제출 막기
-      e.preventDefault();
+    const gestForm = document
+      .getElementById("sendMsg")
+      .addEventListener("submit", function (e) {
+        //alert('확인')
+        //폼 제출 막기
+        e.preventDefault();
 
-      const userId = document.getElementById("userId").value;
-      const msg = document.getElementById("msg").value;
-      const userPw = document.getElementById("userPw").value;
+        const userId = document.getElementById("userId").value;
+        const msg = document.getElementById("msg").value;
+        const userPw = document.getElementById("userPw").value;
 
-      //유효성 검사
-      if (userId && msg && userPw) {
-        //컴포넌트 생성
-        const msgHtml = document.createElement("li");
-        msgHtml.innerHTML = `
+        //유효성 검사
+        if (userId && msg && userPw) {
+          //컴포넌트 생성
+          const msgHtml = document.createElement("li");
+          msgHtml.innerHTML = `
                 <p class="name">${userId}</p>
                 <p class="memo">${msg}</p>
                 <button>삭제</button>
             `;
-        document.getElementById("commentList").prepend(msgHtml);
-      } else {
-        if (!userId) {
-          alert("작성자를 입력하세요.");
-          return;
+          document.getElementById("commentList").prepend(msgHtml);
+        } else {
+          if (!userId) {
+            alert("작성자를 입력하세요.");
+            return;
+          }
+          if (!msg) {
+            alert("내용을 입력하세요.");
+            return;
+          }
+          if (!userPw) {
+            alert("비밀번호를 입력하세요.");
+            return;
+          }
         }
-        if (!msg) {
-          alert("내용을 입력하세요.");
-          return;
-        }
-        if (!userPw) {
-          alert("비밀번호를 입력하세요.");
-          return;
-        }
-      }
 
-      //값 비워주기
-      document.getElementById("userId").value = "";
-      document.getElementById("msg").value = "";
-      document.getElementById("userPw").value = "";
-    });
+        //값 비워주기
+        document.getElementById("userId").value = "";
+        document.getElementById("msg").value = "";
+        document.getElementById("userPw").value = "";
+      });
   </script>
 </html>

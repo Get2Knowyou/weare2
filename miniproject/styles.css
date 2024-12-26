@@ -3,7 +3,8 @@
 /* Main Text Style */
 @font-face {
   font-family: "TTLaundryGothicB";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11,7 +12,8 @@
 /* Sub Text Style */
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -51,6 +53,9 @@ body {
   display: flex;
   gap: 10px;
   position: absolute;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   right: 20px;
 }
 .icon {
@@ -95,7 +100,21 @@ body {
   display: none;
 }
 
-/* ---- member 시작 = 송재헌 ----*/
+.title_content {
+  margin: 50px auto 0px auto;
+}
+
+.title {
+  margin: 20px auto 20px auto;
+}
+
+.team-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ---- member 시작 ----*/
 
 .team-image {
   width: 100%;
@@ -137,7 +156,7 @@ body {
   padding: 120px 80px;
 }
 
-/* TeamTitle css 지영 추가 Start */
+/* TeamTitle css Start */
 .team-title {
   position: relative;
   width: 500px;
@@ -169,7 +188,7 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-/* TeamTitle css 지영 추가 End */
+/* TeamTitle css End */
 .team-container {
   display: flex;
   align-items: center;
@@ -233,7 +252,7 @@ body {
   transform: scale(1.2);
 }
 
-/* ---- modal 시작 = 김하영 ----*/
+/* ---- modal 시작 ----*/
 
 .modal_icon {
   width: 80px;

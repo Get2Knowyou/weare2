@@ -45,19 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
       imgSrc: `${imagePath}r.jpg`,
     },
     {
-      name: "김률희",
-      github: `${imagePath}github-remove.png`,
-      velog: `${imagePath}tstory-remove.png`,
-      githubLink: "https://github.com/rvkrvyoj",
-      tistoryLink: "https://rvkrvyoj.tistory.com/",
-      backgroundImage: `${imagePath}t.jpg`,
-      age: 30,
-      advantages: "가끔씩 나서길 좋아한다..! 그래서 분위기를 좋게 만든다.",
-      style: "chat gpt와 대화를 잘 나눈다....?ㅎㅎ",
-      tmi: "맛있는 거 먹으면서 살 찔 때가 제일 좋아...",
-      imgSrc: `${imagePath}t.jpg`,
-    },
-    {
       name: "조영현",
       github: `${imagePath}github-remove.png`,
       velog: `${imagePath}tstory-remove.png`,
@@ -88,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }" alt="GitHub"></a>
                 <a href="${member.velogLink}" target="_blank"><img src="${
       member.velog
-    }" alt="${member.name === "송재헌" ? "Tstory" : "Velog"}"></a>
+    }" alt="${member.name === "조영현" ? "Tstory" : "Velog"}"></a>
             </div>
         `;
 
@@ -150,66 +137,4 @@ document.addEventListener("DOMContentLoaded", function () {
       enableScroll();
     }
   });
-
-  function disableScroll() {
-    // 현재 페이지 스크롤 위치 가져오기
-    scrollTop = window.scrollY || document.documentElement.scrollTop;
-    (scrollLeft = window.scrollX || document.documentElement.scrollLeft),
-      // 스크롤을 시도하면 이전 값으로 설정
-      (window.onscroll = function () {
-        window.scrollTo(scrollLeft, scrollTop);
-      });
-  }
-
-  function enableScroll() {
-    window.onscroll = null;
-  }
-
-  const introduceBtn = document.getElementById("introduceBtn");
-  const introduce = document.getElementById("introduce");
-  const memberBtn = document.getElementById("memberBtn");
-  const teamMember = document.getElementById("team-member");
-  const commentBtn = document.getElementById("commentBtn");
-  const comment = document.getElementById("F_div");
-
-  introduceBtn.addEventListener("click", () => {
-    window.scrollBy({
-      top: introduce.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  });
-  memberBtn.addEventListener("click", () => {
-    window.scrollBy({
-      top: teamMember.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  });
-  commentBtn.addEventListener("click", () => {
-    window.scrollBy({
-      top: comment.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  });
 });
-
-$(".custom-carousel").owlCarousel({
-  autoWidth: true,
-  loop: true,
-});
-
-$(document).ready(function () {
-  $(".custom-carousel .item").click(function () {
-    $(".custom-carousel .item").not($(this)).removeClass("active");
-    $(this).toggleClass("active");
-  });
-});
-
-$(".top_btn").click(function () {
-  $("html, body").animate({ scrollTop: "0" }, 680);
-});
-
-$(".top_btn").bind("click", function () {
-  $("html, body").animate({ scrollTop: "0" }, 680);
-});
-
-// 애니메이션 효과로 자연스럽게 이동됨, 0.68초
