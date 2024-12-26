@@ -1,17 +1,6 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="ko">
-=======
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>방명록</title>
-    <link rel="stylesheet" href="../std/styles.css" />
-    <link rel="stylesheet" href="./visitors.css" />
-  </head>
->>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
 
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,31 +9,7 @@
   <link rel="stylesheet" href="./../header/header.css" />
   <link rel="stylesheet" href="./visitors.css" />
   <script type="module" src="./visitorsFirebase.js"></script>
-
-<<<<<<< HEAD
 </head>
-=======
-    <div class="content" style="height: 100vh; margin: 0; padding: 40px">
-      <header class="header">
-        <ul>
-          <li>
-            <a href="../home/home.html">HOME</a>
-          </li>
-          <li>
-            <a href="../member/member.html">TEAM</a>
-          </li>
-          <li>
-            <a href="#">JOIN</a>
-          </li>
-          <li class="on">
-            <a href="visitors.html">NEWS</a>
-          </li>
-        </ul>
-      </header>
-      <div class="visitors">
-        <h2 class="title">2조에게 응원의 메세지를 남겨주세요!</h2>
->>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
-
 <body>
   <div class="content" style="height: 100vh; margin: 0; padding: 40px;">
     <header class="header">
@@ -56,7 +21,7 @@
           <a href="./../member/member.html">MEMBERS</a>
         </li>
         <li>
-          <a href="">JOIN</a>
+          <a href="../join/join.html">JOIN</a>
         </li>
         <li class="on">
           <a href="./../visitors/visitors.html">NEWS</a>
@@ -65,28 +30,9 @@
     </header>
     <div class="visitors">
       <h2 class="title">2조에게 응원의 메세지를 남겨주세요!</h2>
-
-<<<<<<< HEAD
       <button id="openWrite">작성하기</button>
-=======
-        <form name="send-msg" id="sendMsg">
-          <div class="flex-area">
-            <div class="inputForm">
-              <label for="userId">작성자</label>
-              <input type="text" name="" id="userId" placeholder="이름" />
-            </div>
 
-            <div class="inputForm">
-              <label for="userPw">비밀번호</label>
-              <input
-                type="password"
-                name=""
-                id="userPw"
-                placeholder="비밀번호 입력"
-              />
-            </div>
-          </div>
->>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
+
 
       <form name="send-msg" id="sendMsg">
         <div class="flex-area">
@@ -98,41 +44,30 @@
             <label for="userPw">비밀번호</label>
             <input type="password" name="pw" id="userPw" placeholder="비밀번호 입력">
           </div>
-<<<<<<< HEAD
-=======
+        </div>
+        <div class="inputForm">
+          <label for="msg">내용</label>
+          <input type="text" name="message" id="msg" placeholder="내용 입력">
+        </div>
 
           <button type="submit">방명록 남기기</button>
         </form>
 
         <div class="comment-area">
           <ul id="commentList">
-            <li>
-              <p class="name">강혜린</p>
-              <p class="memo">2조 화이팅</p>
-              <button>삭제</button>
-            </li>
+            
           </ul>
->>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
+
         </div>
-        <div class="inputForm">
-          <label for="msg">내용</label>
-          <input type="textarea" name="message" id="msg" placeholder="내용을 입력하세요">
-        </div>
-        <button type="submit">방명록 남기기</button>
-      </form>
+       
 
-      <div class="comment-area">
-        <ul id="commentList">
-
-
-        </ul>
-      </div>
+      
     </div>
-<<<<<<< HEAD
+
   </div>
 </body>
 </html>
-=======
+
   </body>
 
   <script>
@@ -185,4 +120,4 @@
       });
   </script>
 </html>
->>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
+
