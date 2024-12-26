@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "김동우",
       github: `${imagePath}github-remove.png`,
-      velog: `${imagePath}velog-remove.png`,
+      velog: `${imagePath}tstory-remove.png`,
       githubLink: "https://github.com/noodlewd",
-      velogLink: "https://velog.io/@duddlfkd02/posts",
+      tistroyLink: "https://rladnehd35.tistory.com/",
       backgroundImage: `${imagePath}w.jpg`,
-      age: 26,
-      advantages: "해야하는 일에 대해 계획성 있게 처리 가능해요",
-      style: "겁이 많지만 악바리로 해내는 스타일",
-      tmi: "빨래를 했는데 비가 옵니다...",
+      age: 27,
+      advantages: "흥미가 생기면 집요하게 파고드는 편입니다.",
+      style: "협업을 중요 시 하고 혼자 성공했을 때 보다 같이 해냈을때 성취감이 더 큽니다.",
+      tmi: "고양이를 좋아하는데 고양이를 키워본 적이 없습니다...",
       imgSrc: `${imagePath}w.jpg`,
     },
     {
@@ -39,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       backgroundImage: `${imagePath}r.jpg`,
       age: 28,
       advantages: "궁금증이 정말 많아서 이것저것 도전해본다.",
-      style:
-        "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
+      style: "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
       tmi: "24시간 에어컨 틀고 있어서 전기세가 걱정됩니다. 그리고 지금 음악 듣고 싶네요.",
       imgSrc: `${imagePath}r.jpg`,
     },
@@ -72,12 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <span class='background_name'>${member.name}</span>
             </div>
             <div class="icons">
-            <a href="${member.githubLink}" target="_blank"><img src="${
-      member.github
-    }" alt="GitHub"></a>
-                <a href="${member.velogLink}" target="_blank"><img src="${
-      member.velog
-    }" alt="${member.name === "조영현" ? "Tstory" : "Velog"}"></a>
+            <a href="${member.githubLink}" target="_blank"><img src="${member.github}" alt="GitHub"></a>
+                <a href="${member.velogLink}" target="_blank"><img src="${member.velog}" alt="${
+      member.name === "조영현" ? "Tstory" : "Velog"
+    }"></a>
             </div>
         `;
 
