@@ -8,7 +8,7 @@ html {
 }
 
 .background {
-  background-image: url("./image/banner_test.jpg");
+  background-image: url("../image/banner_test.jpg");
   background-size: contain; /*비율 유지*/
   background-repeat: no-repeat;
   background-position: center;

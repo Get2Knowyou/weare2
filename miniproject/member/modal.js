@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const teamContainer = document.querySelector(".team-container");
-  const imagePath = "./image/";
+  const imagePath = "../image/";
 
   // 프로필
   const members = [
@@ -68,9 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="${member.backgroundImage}" alt="${member.name}">
                 <div class="overlay">${member.name}</div>
             </div>
-            <div class="icons">
+            <div class="member_name">
             <span class='background_name'>${member.name}</span>
-                <a href="${member.githubLink}" target="_blank"><img src="${
+            </div>
+            <div class="icons">
+            <a href="${member.githubLink}" target="_blank"><img src="${
       member.github
     }" alt="GitHub"></a>
                 <a href="${member.velogLink}" target="_blank"><img src="${
