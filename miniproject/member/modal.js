@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const teamContainer = document.querySelector(".team-container");
-  const imagePath = "./image/";
+  const imagePath = "../image/";
 
   // 프로필
   const members = [
@@ -39,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       backgroundImage: `${imagePath}r.jpg`,
       age: 28,
       advantages: "궁금증이 정말 많아서 이것저것 도전해본다.",
-      style:
-        "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
+      style: "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
       tmi: "24시간 에어컨 틀고 있어서 전기세가 걱정됩니다. 그리고 지금 음악 듣고 싶네요.",
       imgSrc: `${imagePath}r.jpg`,
     },
@@ -83,12 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="icons">
             <span class='background_name'>${member.name}</span>
-                <a href="${member.githubLink}" target="_blank"><img src="${
-      member.github
-    }" alt="GitHub"></a>
-                <a href="${member.velogLink}" target="_blank"><img src="${
-      member.velog
-    }" alt="${member.name === "송재헌" ? "Tstory" : "Velog"}"></a>
+                <a href="${member.githubLink}" target="_blank"><img src="${member.github}" alt="GitHub"></a>
+                <a href="${member.velogLink}" target="_blank"><img src="${member.velog}" alt="${
+      member.name === "송재헌" ? "Tstory" : "Velog"
+    }"></a>
             </div>
         `;
 
