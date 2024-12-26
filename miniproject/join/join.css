@@ -1,0 +1,146 @@
+body {
+  background-image: url("../image/bg.png");
+  height: 98vh;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  width: 90%;
+  top: 50px;
+  border-top: 3px solid #19283d;
+  border-bottom: 3px solid #19283d;
+  color: #19283d;
+  margin: 0 auto 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-between; /* 자식 요소 간 균등 분배 */
+  width: 100%; /* ul의 전체 폭을 header 내부 폭에 맞춤 */
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li {
+  list-style: none;
+  /* flex: 30; */
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  padding-right: 250px;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: #19283d;
+  font-size: 22px;
+}
+
+.header ul li.on {
+  font-weight: 600;
+}
+
+.header ul li.on::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: #19283d;
+}
+.header ul li.on::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: #19283d;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.form-container {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #19283d;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container label {
+  font-size: 16px;
+  color: #19283d;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  background-color: #19283d;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #145a9c;
+}
+
+.data-container {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #19283d;
+}
+
+.data-container ul {
+  list-style: none;
+  padding: 0;
+}
