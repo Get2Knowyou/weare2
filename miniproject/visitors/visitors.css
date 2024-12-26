@@ -120,7 +120,7 @@ button:hover {
   padding-right: 30px;
   margin: 0 auto;
   width: 90%;
-  height: 85%;
+  height: 80%;
   overflow-y: scroll;
 }
 ::-webkit-scrollbar {
@@ -136,68 +136,3 @@ button:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
-
-<<<<<<< HEAD
-
-
-=======
-body {
-  background-image: url("../image/bg.png");
-  height: 100%;
-  background-size: 100% 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  height: 10%;
-  width: 90%;
-  border-top: 3px solid #19283d;
-  border-bottom: 3px solid #19283d;
-  color: #19283d;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-}
-.header ul li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header ul li a {
-  text-decoration: none;
-  color: #19283d;
-  font-size: 20px;
-}
-.header ul li.on {
-  gap: 10px;
-  font-weight: 600;
-}
-.header ul li.on::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  display: inline-block;
-  background-color: #19283d;
-}
-.header ul li.on::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  display: inline-block;
-  background-color: #19283d;
-}
->>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
