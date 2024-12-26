@@ -1,5 +1,16 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="ko">
+=======
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록</title>
+    <link rel="stylesheet" href="../std/styles.css" />
+    <link rel="stylesheet" href="./visitors.css" />
+  </head>
+>>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
 
 <head>
   <meta charset="UTF-8" />
@@ -10,7 +21,29 @@
   <link rel="stylesheet" href="./visitors.css" />
   <script type="module" src="./visitorsFirebase.js"></script>
 
+<<<<<<< HEAD
 </head>
+=======
+    <div class="content" style="height: 100vh; margin: 0; padding: 40px">
+      <header class="header">
+        <ul>
+          <li>
+            <a href="../home/home.html">HOME</a>
+          </li>
+          <li>
+            <a href="../member/member.html">TEAM</a>
+          </li>
+          <li>
+            <a href="#">JOIN</a>
+          </li>
+          <li class="on">
+            <a href="visitors.html">NEWS</a>
+          </li>
+        </ul>
+      </header>
+      <div class="visitors">
+        <h2 class="title">2조에게 응원의 메세지를 남겨주세요!</h2>
+>>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
 
 <body>
   <div class="content" style="height: 100vh; margin: 0; padding: 40px;">
@@ -33,7 +66,27 @@
     <div class="visitors">
       <h2 class="title">2조에게 응원의 메세지를 남겨주세요!</h2>
 
+<<<<<<< HEAD
       <button id="openWrite">작성하기</button>
+=======
+        <form name="send-msg" id="sendMsg">
+          <div class="flex-area">
+            <div class="inputForm">
+              <label for="userId">작성자</label>
+              <input type="text" name="" id="userId" placeholder="이름" />
+            </div>
+
+            <div class="inputForm">
+              <label for="userPw">비밀번호</label>
+              <input
+                type="password"
+                name=""
+                id="userPw"
+                placeholder="비밀번호 입력"
+              />
+            </div>
+          </div>
+>>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
 
       <form name="send-msg" id="sendMsg">
         <div class="flex-area">
@@ -45,6 +98,21 @@
             <label for="userPw">비밀번호</label>
             <input type="password" name="pw" id="userPw" placeholder="비밀번호 입력">
           </div>
+<<<<<<< HEAD
+=======
+
+          <button type="submit">방명록 남기기</button>
+        </form>
+
+        <div class="comment-area">
+          <ul id="commentList">
+            <li>
+              <p class="name">강혜린</p>
+              <p class="memo">2조 화이팅</p>
+              <button>삭제</button>
+            </li>
+          </ul>
+>>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6
         </div>
         <div class="inputForm">
           <label for="msg">내용</label>
@@ -60,6 +128,61 @@
         </ul>
       </div>
     </div>
+<<<<<<< HEAD
   </div>
 </body>
 </html>
+=======
+  </body>
+
+  <script>
+    //방명록 작성 폼 보이게 하기기
+    document.getElementById("openWrite").addEventListener("click", function () {
+      document.getElementById("sendMsg").classList.toggle("disBlock");
+    });
+
+    //방명록 작성
+    const gestForm = document
+      .getElementById("sendMsg")
+      .addEventListener("submit", function (e) {
+        //alert('확인')
+        //폼 제출 막기
+        e.preventDefault();
+
+        const userId = document.getElementById("userId").value;
+        const msg = document.getElementById("msg").value;
+        const userPw = document.getElementById("userPw").value;
+
+        //유효성 검사
+        if (userId && msg && userPw) {
+          //컴포넌트 생성
+          const msgHtml = document.createElement("li");
+          msgHtml.innerHTML = `
+                <p class="name">${userId}</p>
+                <p class="memo">${msg}</p>
+                <button>삭제</button>
+            `;
+          document.getElementById("commentList").prepend(msgHtml);
+        } else {
+          if (!userId) {
+            alert("작성자를 입력하세요.");
+            return;
+          }
+          if (!msg) {
+            alert("내용을 입력하세요.");
+            return;
+          }
+          if (!userPw) {
+            alert("비밀번호를 입력하세요.");
+            return;
+          }
+        }
+
+        //값 비워주기
+        document.getElementById("userId").value = "";
+        document.getElementById("msg").value = "";
+        document.getElementById("userPw").value = "";
+      });
+  </script>
+</html>
+>>>>>>> c7598e0959aa282607528670e1da266cb3c67cb6

@@ -3,7 +3,8 @@
 /* Main Text Style */
 @font-face {
   font-family: "TTLaundryGothicB";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -11,7 +12,8 @@
 /* Sub Text Style */
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -22,11 +24,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-}
-
 .team_banner {
   width: 600px;
   height: 400px;
@@ -34,58 +31,9 @@ body {
   margin: 50px auto 50px auto;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  position: relative;
-}
-.header h1 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-.icons {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  right: 20px;
-}
-.icon {
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  border-radius: 50%;
-}
-.nav {
-  display: flex;
-  justify-content: center;
-  background-color: #555;
-  color: white;
-  padding: 10px 0;
-}
-.nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-.nav a:hover {
-  text-decoration: underline;
-}
 .content {
   margin: 20px;
   text-align: center;
-}
-.content-box {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .content-box h2 {
   margin-bottom: 10px;
@@ -95,7 +43,27 @@ body {
   display: none;
 }
 
-/* ---- member 시작 = 송재헌 ----*/
+.title_content {
+  margin: 40px auto 0px auto;
+  font-family: "TTLaundryGothicB";
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.title {
+  margin: 40px auto 40px auto;
+  font-family: "TTLaundryGothicB";
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.team-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ---- member 시작 ----*/
 
 .team-image {
   width: 100%;
@@ -137,7 +105,13 @@ body {
   padding: 120px 80px;
 }
 
-/* TeamTitle css 지영 추가 Start */
+.team-content {
+  font-family: "TTLaundryGothicB";
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/* TeamTitle css Start */
 .team-title {
   position: relative;
   width: 500px;
@@ -169,7 +143,7 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-/* TeamTitle css 지영 추가 End */
+/* TeamTitle css End */
 .team-container {
   display: flex;
   align-items: center;
@@ -219,8 +193,17 @@ body {
   cursor: pointer;
 }
 
+.background_name {
+  font-family: "TTLaundryGothicB";
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+}
+
 .icons {
-  margin-top: 10px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: right;
 }
 
 .icons a img {
@@ -233,7 +216,7 @@ body {
   transform: scale(1.2);
 }
 
-/* ---- modal 시작 = 김하영 ----*/
+/* ---- modal 시작 ----*/
 
 .modal_icon {
   width: 80px;
@@ -245,6 +228,7 @@ body {
 #modal_container {
   display: none;
   width: 100%;
+  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
@@ -256,7 +240,6 @@ body {
 
 .team_modal {
   cursor: auto;
-  height: 100vh;
   margin: auto;
   padding: 20px;
   position: relative;
@@ -288,6 +271,13 @@ body {
 #member_image img {
   width: 100%;
   height: 100%;
+}
+
+.member_name {
+  float: left;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 #member_name {

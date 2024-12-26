@@ -39,22 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
       backgroundImage: `${imagePath}r.jpg`,
       age: 28,
       advantages: "궁금증이 정말 많아서 이것저것 도전해본다.",
-      style: "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
+      style:
+        "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
       tmi: "24시간 에어컨 틀고 있어서 전기세가 걱정됩니다. 그리고 지금 음악 듣고 싶네요.",
       imgSrc: `${imagePath}r.jpg`,
-    },
-    {
-      name: "김률희",
-      github: `${imagePath}github-remove.png`,
-      velog: `${imagePath}tstory-remove.png`,
-      githubLink: "https://github.com/rvkrvyoj",
-      tistoryLink: "https://rvkrvyoj.tistory.com/",
-      backgroundImage: `${imagePath}t.jpg`,
-      age: 30,
-      advantages: "가끔씩 나서길 좋아한다..! 그래서 분위기를 좋게 만든다.",
-      style: "chat gpt와 대화를 잘 나눈다....?ㅎㅎ",
-      tmi: "맛있는 거 먹으면서 살 찔 때가 제일 좋아...",
-      imgSrc: `${imagePath}t.jpg`,
     },
     {
       name: "조영현",
@@ -80,12 +68,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="${member.backgroundImage}" alt="${member.name}">
                 <div class="overlay">${member.name}</div>
             </div>
-            <div class="icons">
+            <div class="member_name">
             <span class='background_name'>${member.name}</span>
-                <a href="${member.githubLink}" target="_blank"><img src="${member.github}" alt="GitHub"></a>
-                <a href="${member.velogLink}" target="_blank"><img src="${member.velog}" alt="${
-      member.name === "송재헌" ? "Tstory" : "Velog"
-    }"></a>
+            </div>
+            <div class="icons">
+            <a href="${member.githubLink}" target="_blank"><img src="${
+      member.github
+    }" alt="GitHub"></a>
+                <a href="${member.velogLink}" target="_blank"><img src="${
+      member.velog
+    }" alt="${member.name === "조영현" ? "Tstory" : "Velog"}"></a>
             </div>
         `;
 
@@ -147,66 +139,4 @@ document.addEventListener("DOMContentLoaded", function () {
       enableScroll();
     }
   });
-
-  function disableScroll() {
-    // 현재 페이지 스크롤 위치 가져오기
-    scrollTop = window.scrollY || document.documentElement.scrollTop;
-    (scrollLeft = window.scrollX || document.documentElement.scrollLeft),
-      // 스크롤을 시도하면 이전 값으로 설정
-      (window.onscroll = function () {
-        window.scrollTo(scrollLeft, scrollTop);
-      });
-  }
-
-  function enableScroll() {
-    window.onscroll = null;
-  }
-
-  const introduceBtn = document.getElementById("introduceBtn");
-  const introduce = document.getElementById("introduce");
-  const memberBtn = document.getElementById("memberBtn");
-  const teamMember = document.getElementById("team-member");
-  const commentBtn = document.getElementById("commentBtn");
-  const comment = document.getElementById("F_div");
-
-  introduceBtn.addEventListener("click", () => {
-    window.scrollBy({
-      top: introduce.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  });
-  memberBtn.addEventListener("click", () => {
-    window.scrollBy({
-      top: teamMember.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  });
-  commentBtn.addEventListener("click", () => {
-    window.scrollBy({
-      top: comment.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  });
 });
-
-$(".custom-carousel").owlCarousel({
-  autoWidth: true,
-  loop: true,
-});
-
-$(document).ready(function () {
-  $(".custom-carousel .item").click(function () {
-    $(".custom-carousel .item").not($(this)).removeClass("active");
-    $(this).toggleClass("active");
-  });
-});
-
-$(".top_btn").click(function () {
-  $("html, body").animate({ scrollTop: "0" }, 680);
-});
-
-$(".top_btn").bind("click", function () {
-  $("html, body").animate({ scrollTop: "0" }, 680);
-});
-
-// 애니메이션 효과로 자연스럽게 이동됨, 0.68초
