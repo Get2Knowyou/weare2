@@ -2,10 +2,6 @@
 document.getElementById("openWrite").addEventListener("click", function () {
   document.getElementById("sendMsg").classList.toggle("disBlock");
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import {
@@ -18,10 +14,6 @@ import {
   getDoc,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-<<<<<<< HEAD
-
-=======
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
@@ -39,10 +31,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
 const db = getFirestore(app); // Firestore 초기화
-<<<<<<< HEAD
-
-=======
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
 //로드시 데이터 가져오기
 async function fetchData() {
   const querySnapshot = await getDocs(collection(db, "visitors"));
@@ -57,7 +45,7 @@ function createLi(visitor, docId) {
   const commentList = document.getElementById("commentList");
   let li = document.createElement("li");
   li.innerHTML = `
-<<<<<<< HEAD
+
     <p class="name">${visitor.name}</p>
     <p class="memo">${visitor.message}</p>
     <button class="deleteBtn" data-doc-id="${docId}">삭제</button>`;
@@ -67,15 +55,6 @@ function createLi(visitor, docId) {
   deleteBtn.addEventListener("click", function () {
     const docId = deleteBtn.dataset.docId;
 
-=======
-      <p class="name">${visitor.name}</p>
-      <p class="memo">${visitor.message}</p>
-      <button class="deleteBtn" data-doc-id="${docId}">삭제</button>`;
-  commentList.appendChild(li);
-  const deleteBtn = li.querySelector(".deleteBtn");
-  deleteBtn.addEventListener("click", function () {
-    const docId = deleteBtn.dataset.docId;
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
     console.log(docId);
     if (docId) {
       deleteVisitor(docId); // 문서 삭제 함수 호출
@@ -85,52 +64,7 @@ function createLi(visitor, docId) {
   });
 }
 //방명록 작성
-<<<<<<< HEAD
 
-document
-  .getElementById("sendMsg")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const password = e.target.pw.value;
-    const message = e.target.message.value;
-    const doc = {
-      name: name,
-      pw: password,
-      message: message,
-    };
-
-    //유효성 검사
-    if (!name || !message || !password) {
-      if (!name) alert("작성자를 입력하세요.");
-      if (!message) alert("내용을 입력하세요.");
-      if (!password) alert("비밀번호를 입력하세요.");
-      return;
-    }
-    const docRef = await addDoc(collection(db, "visitors"), doc);
-    alert("작성완료!");
-    //컴포넌트 생성
-    let li = document.createElement("li");
-    li.innerHTML = `
-    <p class="name">${name}</p>
-    <p class="memo">${message}</p>
-    <button class="deleteBtn" data-doc-id="${docRef.id}">삭제</button>`;
-    document.getElementById("commentList").prepend(li);
-
-    const deleteBtn = li.querySelector(".deleteBtn");
-    deleteBtn.addEventListener("click", function () {
-      deleteVisitor(docRef.id); // 문서 삭제 함수 호출
-    });
-
-    // 값 비워주기
-    e.target.name.value = "";
-    e.target.pw.value = "";
-    e.target.message.value = "";
-  });
-
-//삭제함수
-
-=======
 document.getElementById("sendMsg").addEventListener("submit", async function (e) {
   e.preventDefault();
   const name = e.target.name.value;
@@ -141,6 +75,7 @@ document.getElementById("sendMsg").addEventListener("submit", async function (e)
     pw: password,
     message: message,
   };
+
   //유효성 검사
   if (!name || !message || !password) {
     if (!name) alert("작성자를 입력하세요.");
@@ -153,21 +88,24 @@ document.getElementById("sendMsg").addEventListener("submit", async function (e)
   //컴포넌트 생성
   let li = document.createElement("li");
   li.innerHTML = `
-      <p class="name">${name}</p>
-      <p class="memo">${message}</p>
-      <button class="deleteBtn" data-doc-id="${docRef.id}">삭제</button>`;
+    <p class="name">${name}</p>
+    <p class="memo">${message}</p>
+    <button class="deleteBtn" data-doc-id="${docRef.id}">삭제</button>`;
   document.getElementById("commentList").prepend(li);
+
   const deleteBtn = li.querySelector(".deleteBtn");
   deleteBtn.addEventListener("click", function () {
     deleteVisitor(docRef.id); // 문서 삭제 함수 호출
   });
+
   // 값 비워주기
   e.target.name.value = "";
   e.target.pw.value = "";
   e.target.message.value = "";
 });
+
 //삭제함수
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
+
 async function deleteVisitor(docId) {
   //비밀번호 입력 받기
   const passwordInput = prompt("비밀번호를 입력하세요");
@@ -177,10 +115,6 @@ async function deleteVisitor(docId) {
   }
   const visitorRef = doc(db, "visitors", docId); // 방문자ID가져오기
   const visitor = await getDoc(visitorRef); // 방문자 정보 가져오기
-<<<<<<< HEAD
-
-=======
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
   if (visitor.data().pw !== passwordInput) {
     alert("비밀밀번호가 일치하지 않습니다.");
     return;
@@ -188,15 +122,9 @@ async function deleteVisitor(docId) {
   await deleteDoc(visitorRef); // 문서 삭제
   console.log("문서 삭제 완료");
   alert("삭제가 완료되었습니다!");
-<<<<<<< HEAD
-  const liToDelete = document.querySelector(
-    `button[data-doc-id='${docId}']`
-  ).parentNode;
-  liToDelete.remove();
 
-=======
   const liToDelete = document.querySelector(`button[data-doc-id='${docId}']`).parentNode;
   liToDelete.remove();
->>>>>>> e500fa3123d9b4b31f2652f6a9347799fc80a626
+
   console.log("test");
 }
