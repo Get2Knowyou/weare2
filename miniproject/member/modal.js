@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
       githubLink: "https://github.com/chillax96/chillax96.github.io",
       velogLink: "https://velog.io/@chillax96/posts",
       backgroundImage: `${imagePath}q.jpg`,
-      age: 23,
-      mbti: "ISTP",
+      age: 29,
+      mbti: "INFP",
       advantages: "끈기 있다.",
       style: "꼼꼼하다.",
       tmi: "더위를 많이 타서 여름이 힘들다...",
@@ -26,10 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
       tistroyLink: "https://rladnehd35.tistory.com/",
       backgroundImage: `${imagePath}w.jpg`,
       age: 27,
-      mbti: "ISTP",
+      mbti: "ESFJ",
       advantages: "흥미가 생기면 집요하게 파고드는 편입니다.",
-      style:
-        "협업을 중요 시 하고 혼자 성공했을 때 보다 같이 해냈을때 성취감이 더 큽니다.",
+      style: "협업을 중요 시 하고 혼자 성공했을 때 보다 같이 해냈을때 성취감이 더 큽니다.",
       tmi: "고양이를 좋아하는데 고양이를 키워본 적이 없습니다...",
       imgSrc: `${imagePath}w.jpg`,
     },
@@ -43,8 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: 28,
       mbti: "ISTP",
       advantages: "궁금증이 정말 많아서 이것저것 도전해본다.",
-      style:
-        "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
+      style: "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
       tmi: "지금 음악 듣고 싶네요.",
       imgSrc: `${imagePath}r.jpg`,
     },
@@ -76,12 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="icons">
             <span class='background_name'>${member.name}</span>
             <span class="mbti">${member.mbti}</span>
-            <a href="${member.githubLink}" target="_blank"><img src="${
-      member.github
-    }" alt="GitHub"></a>
-                <a href="${member.velogLink}" target="_blank"><img src="${
-      member.velog
-    }" alt="${member.name === "조영현" ? "Tstory" : "Velog"}"></a>
+            <a href="${member.githubLink}" target="_blank"><img src="${member.github}" alt="GitHub"></a>
+                <a href="${member.velogLink}" target="_blank"><img src="${member.velog}" alt="${
+      member.name === "조영현" ? "Tstory" : "Velog"
+    }"></a>
             </div>
         `;
 
