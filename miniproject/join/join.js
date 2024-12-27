@@ -54,19 +54,25 @@ function addMemberToList(member) {
     memberList.appendChild(li);
 }
 
-// 데이터 수정 함수
+
 function editMember(button) {
     const li = button.parentElement;
-    const [nameInfo, details] = li.innerHTML.split("<br>");
-    const [nameAge, mbti] = nameInfo.match(/<strong>(.+?)<\/strong> \((.+?)세, (.+?)\)/);
-    
-    // 입력 필드에 데이터 채우기
-    document.getElementById("name").value = nameAge[1];
-    document.getElementById("age").value = nameAge[2];
-    document.getElementById("style").value = details.split(": ")[1];
-    document.getElementById("strength").value = strength.split(":")[1]
 
-    // 수정 후 목록에서 제거
+    // 데이터 추출 (정규식 대신 DOM 접근 방식 사용)
+    const nameMatch = li.querySelector("strong").innerText; // 이름 추출
+    const ageMatch = li.querySelector("strong").nextSibling.textContent.match(/\((\d+)세/); // 나이 추출
+    const mbtiMatch = li.querySelector("strong").nextSibling.textContent.match(/, (.+?)\)/); // MBTI 추출
+    const styleMatch = li.innerHTML.match(/협업 스타일: (.+?)<br>/)[1]; // 협업 스타일 추출
+    const strengthMatch = li.innerHTML.match(/장점: (.+?)<br>/)[1]; // 장점 추출
+
+    // 입력 필드에 데이터 채우기
+    document.getElementById("name").value = nameMatch;
+    document.getElementById("age").value = ageMatch[1];
+    document.getElementById("mbti").value = mbtiMatch[1];
+    document.getElementById("style").value = styleMatch;
+    document.getElementById("strength").value = strengthMatch;
+
+    // 수정 후 항목 삭제
     memberList.removeChild(li);
 }
 
