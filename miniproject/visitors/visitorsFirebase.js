@@ -127,6 +127,7 @@ async function deleteVisitor(docId) {
     const liToDelete = document.querySelector(`button[data-doc-id='${docId}']`).parentNode;
     liToDelete.remove();
 
+    console.log('test')
 
 
 }
