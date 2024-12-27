@@ -45,16 +45,13 @@ function createLi(visitor, docId) {
   const commentList = document.getElementById("commentList");
   let li = document.createElement("li");
   li.innerHTML = `
-
-    <p class="name">${visitor.name}</p>
-    <p class="memo">${visitor.message}</p>
-    <button class="deleteBtn" data-doc-id="${docId}">삭제</button>`;
+      <p class="name">${visitor.name}</p>
+      <p class="memo">${visitor.message}</p>
+      <button class="deleteBtn" data-doc-id="${docId}">삭제</button>`;
   commentList.appendChild(li);
-
   const deleteBtn = li.querySelector(".deleteBtn");
   deleteBtn.addEventListener("click", function () {
     const docId = deleteBtn.dataset.docId;
-
     console.log(docId);
     if (docId) {
       deleteVisitor(docId); // 문서 삭제 함수 호출
@@ -64,7 +61,6 @@ function createLi(visitor, docId) {
   });
 }
 //방명록 작성
-
 document.getElementById("sendMsg").addEventListener("submit", async function (e) {
   e.preventDefault();
   const name = e.target.name.value;
@@ -75,7 +71,6 @@ document.getElementById("sendMsg").addEventListener("submit", async function (e)
     pw: password,
     message: message,
   };
-
   //유효성 검사
   if (!name || !message || !password) {
     if (!name) alert("작성자를 입력하세요.");
@@ -88,24 +83,20 @@ document.getElementById("sendMsg").addEventListener("submit", async function (e)
   //컴포넌트 생성
   let li = document.createElement("li");
   li.innerHTML = `
-    <p class="name">${name}</p>
-    <p class="memo">${message}</p>
-    <button class="deleteBtn" data-doc-id="${docRef.id}">삭제</button>`;
+      <p class="name">${name}</p>
+      <p class="memo">${message}</p>
+      <button class="deleteBtn" data-doc-id="${docRef.id}">삭제</button>`;
   document.getElementById("commentList").prepend(li);
-
   const deleteBtn = li.querySelector(".deleteBtn");
   deleteBtn.addEventListener("click", function () {
     deleteVisitor(docRef.id); // 문서 삭제 함수 호출
   });
-
   // 값 비워주기
   e.target.name.value = "";
   e.target.pw.value = "";
   e.target.message.value = "";
 });
-
 //삭제함수
-
 async function deleteVisitor(docId) {
   //비밀번호 입력 받기
   const passwordInput = prompt("비밀번호를 입력하세요");
@@ -122,9 +113,7 @@ async function deleteVisitor(docId) {
   await deleteDoc(visitorRef); // 문서 삭제
   console.log("문서 삭제 완료");
   alert("삭제가 완료되었습니다!");
-
   const liToDelete = document.querySelector(`button[data-doc-id='${docId}']`).parentNode;
   liToDelete.remove();
-
   console.log("test");
 }
