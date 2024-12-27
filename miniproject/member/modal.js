@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       velogLink: "https://velog.io/@chillax96/posts",
       backgroundImage: `${imagePath}q.jpg`,
       age: 23,
+      mbti: "ISTP",
       advantages: "끈기 있다.",
       style: "꼼꼼하다.",
       tmi: "더위를 많이 타서 여름이 힘들다...",
@@ -25,8 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
       tistroyLink: "https://rladnehd35.tistory.com/",
       backgroundImage: `${imagePath}w.jpg`,
       age: 27,
+      mbti: "ISTP",
       advantages: "흥미가 생기면 집요하게 파고드는 편입니다.",
-      style: "협업을 중요 시 하고 혼자 성공했을 때 보다 같이 해냈을때 성취감이 더 큽니다.",
+      style:
+        "협업을 중요 시 하고 혼자 성공했을 때 보다 같이 해냈을때 성취감이 더 큽니다.",
       tmi: "고양이를 좋아하는데 고양이를 키워본 적이 없습니다...",
       imgSrc: `${imagePath}w.jpg`,
     },
@@ -38,9 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
       tistroyLink: "https://rinny01.tistory.com/",
       backgroundImage: `${imagePath}r.jpg`,
       age: 28,
+      mbti: "ISTP",
       advantages: "궁금증이 정말 많아서 이것저것 도전해본다.",
-      style: "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
-      tmi: "24시간 에어컨 틀고 있어서 전기세가 걱정됩니다. 그리고 지금 음악 듣고 싶네요.",
+      style:
+        "비전공자라 굉장히 꼼꼼하게 찾아보지만 결국엔 GPT 의 도움을 받는다.",
+      tmi: "지금 음악 듣고 싶네요.",
       imgSrc: `${imagePath}r.jpg`,
     },
     {
@@ -51,9 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
       tistoryLink: "https://yyy3489.tistory.com/",
       backgroundImage: `${imagePath}e.jpg`,
       age: 30,
+      mbti: "ISTP",
       advantages: "마음먹은건 어떻게 해서든 꼭 해내요!",
-      style: "계획적이고 체계적인걸 좋아하는 스타일",
-      tmi: "강아지가 편식을 해요... 배가 불렀나봐요..",
+      style: "호기심이 많고 자유로움을 좋아합니다.",
+      tmi: "감기에 걸려서 힘들어요 !!",
       imgSrc: `${imagePath}e.jpg`,
     },
   ];
@@ -66,15 +72,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="photo member_content" id="member_content_${idx}">
                 <img src="${member.backgroundImage}" alt="${member.name}">
                 <div class="overlay">${member.name}</div>
-            </div>
-            <div class="member_name">
-            <span class='background_name'>${member.name}</span>
-            </div>
+            </div>            
             <div class="icons">
-            <a href="${member.githubLink}" target="_blank"><img src="${member.github}" alt="GitHub"></a>
-                <a href="${member.velogLink}" target="_blank"><img src="${member.velog}" alt="${
-      member.name === "조영현" ? "Tstory" : "Velog"
-    }"></a>
+            <span class='background_name'>${member.name}</span>
+            <span class="mbti">${member.mbti}</span>
+            <a href="${member.githubLink}" target="_blank"><img src="${
+      member.github
+    }" alt="GitHub"></a>
+                <a href="${member.velogLink}" target="_blank"><img src="${
+      member.velog
+    }" alt="${member.name === "조영현" ? "Tstory" : "Velog"}"></a>
             </div>
         `;
 
