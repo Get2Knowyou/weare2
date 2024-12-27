@@ -120,7 +120,7 @@ button:hover {
   padding-right: 30px;
   margin: 0 auto;
   width: 90%;
-  height: 80%;
+  height: 70%;
   overflow-y: scroll;
 }
 ::-webkit-scrollbar {
